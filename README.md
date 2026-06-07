@@ -1,76 +1,177 @@
-# Gesture-Controlled Presentation
+<div align="center">
 
-> Control your slides hands-free using real-time hand gesture recognition powered by computer vision and AI.
+<!-- Animated Header Banner -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=Gesture%20Controlled%20Presentation&fontSize=40&fontColor=fff&animation=twinkling&fontAlignY=35&desc=Control%20your%20slides%20hands-free%20with%20AI-powered%20hand%20tracking&descAlignY=55&descSize=16" width="100%"/>
 
-[![Python](https://img.shields.io/badge/Python-3.7+-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
-[![OpenCV](https://img.shields.io/badge/OpenCV-4.x-5C3EE8?style=flat-square&logo=opencv&logoColor=white)](https://opencv.org/)
+<!-- Animated Typing SVG -->
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=6E40C9&center=true&vCenter=true&multiline=true&width=600&height=80&lines=👋+Wave+to+Navigate+Slides;✍️+Draw+Annotations+Mid-Presentation;🤖+Powered+by+Computer+Vision+%26+AI" alt="Typing SVG" />
+</a>
+
+<br/>
+
+<!-- Core Badges -->
+<p>
+  <img src="https://img.shields.io/badge/Python-3.7+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/OpenCV-4.x-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV"/>
+  <img src="https://img.shields.io/badge/MediaPipe-Latest-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="MediaPipe"/>
+  <img src="https://img.shields.io/badge/CVZone-Hand%20Tracking-FF6B6B?style=for-the-badge&logo=hand&logoColor=white" alt="CVZone"/>
+</p>
+
+<p>
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge&logo=checkmarx&logoColor=white" alt="Status"/>
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="License"/>
+  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-blue?style=for-the-badge&logo=github&logoColor=white" alt="Platform"/>
+</p>
 
 </div>
 
 ---
 
-## About the Project
+## 🧠 About the Project
 
-This system uses **OpenCV** and **CVZone's Hand Tracking Module** to detect and classify hand gestures in real time. Recognized gestures are mapped to presentation actions — such as navigating slides, drawing annotations, and more — enabling a seamless, interactive presentation experience.
+<img align="right" width="320" src="https://user-images.githubusercontent.com/74038190/229223156-0cbdaba9-3128-4d8e-8719-b6b4cf741b67.gif" alt="AI Gesture Demo" />
+
+This system uses **OpenCV** and **CVZone's Hand Tracking Module** to detect and classify hand gestures in real time via your webcam. Recognized gestures are mapped to intuitive presentation actions — navigating slides, drawing freehand annotations, pointing, and more — enabling a truly **seamless, touch-free** presentation experience.
+
+> *No clicker. No keyboard. Just your hands.*
+
+Built as an exploration of Human-Computer Interaction (HCI), this project bridges **computer vision**, **machine learning**, and **real-time UI interaction** into a single, elegant pipeline.
+
+<br clear="right"/>
 
 ---
 
-## Features
+## ✨ Features
+
+<div align="center">
 
 | | Feature | Description |
-|---|---|---|
+|:---:|:---|:---|
 | 👈 | **Slide Navigation** | Swipe left/right using thumb or pinky to go back or advance slides |
 | ✍️ | **Freehand Annotation** | Draw on slides in real time using your index finger |
 | 🗑️ | **Undo Annotation** | Remove the last drawn annotation with a 3-finger gesture |
-| 🖱️ | **Pointer Mode** | Use two fingers to show a cursor on the slide |
-| 🖥️ | **Live Camera Preview** | Small webcam feed overlaid on the slide for presenter awareness |
+| 🖱️ | **Pointer Mode** | Use two fingers to display a live cursor on the slide |
+| 🖥️ | **Live Camera Overlay** | Small webcam feed overlaid on the slide for presenter awareness |
 | 🎙️ | **Speech Recognition** | Voice command support *(test.py only)* |
-| 🖊️ | **Pen & Slider Indicators** | On-screen indicators for active modes *(test.py only)* |
-
----
-
-## Requirements
-
-- Python 3.7+
-- A working webcam
-
-## Gesture Controls
-
-<div align="center">
-
-| Gesture | Fingers | Action |
-|:---:|---|---|
-| ☝️ | Index finger only | **Draw** annotation on slide |
-| 👍 | Thumb only | **Previous** slide |
-| 🤙 | Pinky only | **Next** slide |
-| ✌️ | Index + Middle | **Pointer** cursor |
-| 🤟 | Index + Middle + Ring | **Undo** last annotation |
-| 🖐️ | All five fingers *(test.py)* | **Slider** indicator |
-| 🤘 | Middle + Ring + Pinky *(test.py)* | **Pen** indicator |
+| 🖊️ | **Mode Indicators** | On-screen pen & slider indicators *(test.py only)* |
 
 </div>
 
-> **Note:** Gestures are only registered when your hand is raised **above** the green threshold line (upper portion of the camera frame).
+---
+
+## 🖐️ Gesture Reference
+
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=14&pause=2000&color=6E40C9&center=true&vCenter=true&width=500&lines=Raise+your+hand+above+the+green+line+to+activate+gestures!" alt="Gesture Hint"/>
+
+| Gesture | Visual | Fingers | Action |
+|:---:|:---:|:---|:---|
+| Draw | ☝️ | Index finger only | **Annotate** on slide |
+| Previous | 👍 | Thumb only | **Previous** slide |
+| Next | 🤙 | Pinky only | **Next** slide |
+| Pointer | ✌️ | Index + Middle | **Cursor** on slide |
+| Undo | 🤟 | Index + Middle + Ring | **Undo** annotation |
+| Slider | 🖐️ | All five fingers *(test.py)* | **Slider** indicator |
+| Pen | 🤘 | Middle + Ring + Pinky *(test.py)* | **Pen** indicator |
+
+> ⚠️ **Note:** Gestures activate only when your hand is raised **above** the green threshold line in the upper portion of the camera frame.
+
+</div>
 
 ---
 
-## Tech Stack
+## ⚙️ Requirements
+
+```bash
+Python 3.7+    # Core language
+OpenCV 4.x     # Video capture & processing
+MediaPipe      # Hand landmark detection
+CVZone         # High-level hand tracking
+NumPy          # Array & coordinate math
+SpeechRecognition  # Voice commands (test.py)
+A working webcam   # Required hardware
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/gesture-presentation.git
+cd gesture-presentation
+```
+
+### 2. Install dependencies
+
+```bash
+pip install opencv-python cvzone mediapipe numpy SpeechRecognition
+```
+
+### 3. Add your presentation slides
+
+Place your slide images (e.g., `slide1.jpg`, `slide2.jpg`, ...) inside the `Presentation/` folder.
+
+### 4. Run the application
+
+```bash
+# Standard gesture control
+python main.py
+
+# Extended mode (pen indicator, slider, voice commands)
+python test.py
+```
+
+---
+
+## 🛠️ Tech Stack
 
 <div align="center">
+
+<p>
+  <img src="https://skillicons.dev/icons?i=python,opencv&theme=dark" alt="Tech Stack Icons"/>
+</p>
 
 | Technology | Role | Version |
-|---|---|---|
-| ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | Core programming language | 3.7+ |
-| ![OpenCV](https://img.shields.io/badge/-OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white) | Video capture & image processing | 4.x |
-| ![MediaPipe](https://img.shields.io/badge/-MediaPipe-4285F4?style=flat-square&logo=google&logoColor=white) | Hand landmark detection | Latest |
-| CVZone | Hand tracking & finger detection | Latest |
-| NumPy | Coordinate interpolation | Latest |
+|:---:|:---|:---:|
+| <img src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white"/> | Core programming language | `3.7+` |
+| <img src="https://img.shields.io/badge/-OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white"/> | Video capture & image processing | `4.x` |
+| <img src="https://img.shields.io/badge/-MediaPipe-4285F4?style=flat-square&logo=google&logoColor=white"/> | Hand landmark detection | `Latest` |
+| <img src="https://img.shields.io/badge/-CVZone-FF6B6B?style=flat-square&logoColor=white"/> | Hand tracking & finger detection | `Latest` |
+| <img src="https://img.shields.io/badge/-NumPy-013243?style=flat-square&logo=numpy&logoColor=white"/> | Coordinate interpolation | `Latest` |
 
 </div>
 
 ---
 
-## References
+## 📐 How It Works
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                   GESTURE PIPELINE                          │
+│                                                             │
+│  📷 Webcam Input                                            │
+│       │                                                     │
+│       ▼                                                     │
+│  🧠 MediaPipe → Hand Landmarks (21 keypoints)               │
+│       │                                                     │
+│       ▼                                                     │
+│  👁️ CVZone → Finger State Detection                         │
+│       │                                                     │
+│       ▼                                                     │
+│  🗺️ Gesture Mapping → Action Dispatcher                     │
+│       │                                                     │
+│       ▼                                                     │
+│  🖥️ OpenCV → Render Slide + Overlay + Annotations           │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 📚 References
 
 1. [Gesture Recognition in Presentations](https://www.eurchembull.com/uploads/paper/e1872b82f7272d54308f653ddd1fc741.pdf)
 2. [Hand Gesture-Based Control Systems](https://www.itm-conferences.org/articles/itmconf/pdf/2022/04/itmconf_icacc2022_03031.pdf)
@@ -83,6 +184,17 @@ This system uses **OpenCV** and **CVZone's Hand Tracking Module** to detect and 
 
 ---
 
+<!-- Animated Footer -->
 <div align="center">
-  <sub>Built with ❤️ by Haridharan K.S </sub>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer&animation=twinkling" width="100%"/>
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=14&pause=1500&color=6E40C9&center=true&vCenter=true&width=440&lines=Built+with+❤️+by+Haridharan+K.S;Star+⭐+the+repo+if+you+found+it+useful!" alt="Footer Typing"/>
+
+<br/>
+
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/your-username)
+
+<sub>© 2024 Haridharan K.S — Gesture-Controlled Presentation</sub>
+
 </div>
