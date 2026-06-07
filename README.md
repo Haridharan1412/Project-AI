@@ -3,11 +3,6 @@
 <!-- Animated Header Banner -->
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=Gesture%20Controlled%20Presentation&fontSize=40&fontColor=fff&animation=twinkling&fontAlignY=35&desc=Control%20your%20slides%20hands-free%20with%20AI-powered%20hand%20tracking&descAlignY=55&descSize=16" width="100%"/>
 
-<!-- Animated Typing SVG -->
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=6E40C9&center=true&vCenter=true&multiline=true&width=600&height=80&lines=👋+Wave+to+Navigate+Slides;✍️+Draw+Annotations+Mid-Presentation;🤖+Powered+by+Computer+Vision+%26+AI" alt="Typing SVG" />
-</a>
-
 <br/>
 
 <!-- Core Badges -->
