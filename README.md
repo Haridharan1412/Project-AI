@@ -1,19 +1,8 @@
 <div align="center">
 
-<!-- ANIMATED LOGO BANNER -->
+<!-- ANIMATED BANNER - uses only SMIL animations, GitHub-safe -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
   <defs>
-    <style>
-      @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
-      @keyframes pulse { 0%,100%{opacity:0.6;r:60} 50%{opacity:1;r:65} }
-      @keyframes draw { from{stroke-dashoffset:200} to{stroke-dashoffset:0} }
-      @keyframes fadeIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
-      .hand { animation: float 3s ease-in-out infinite; transform-origin: 120px 100px; }
-      .ring1 { animation: pulse 2.5s ease-in-out infinite; }
-      .draw-path { stroke-dasharray:200; animation: draw 2s ease-in-out infinite alternate; }
-      .title { animation: fadeIn 1s ease both; }
-      .sub { animation: fadeIn 1s 0.3s ease both; }
-    </style>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0f0c29"/>
       <stop offset="50%" stop-color="#302b63"/>
@@ -24,46 +13,74 @@
   <!-- Background -->
   <rect width="800" height="200" rx="16" fill="url(#bg)"/>
 
-  <!-- Glow circles -->
-  <circle cx="680" cy="80" r="80" fill="rgba(130,100,255,0.08)"/>
-  <circle cx="100" cy="160" r="60" fill="rgba(80,180,255,0.06)"/>
+  <!-- Glow orbs -->
+  <circle cx="680" cy="80" r="90" fill="rgba(130,100,255,0.07)"/>
+  <circle cx="100" cy="160" r="60" fill="rgba(80,180,255,0.05)"/>
 
-  <!-- Animated hand group -->
-  <g class="hand">
-    <!-- Outer pulse ring -->
-    <circle cx="120" cy="100" r="60" fill="none" stroke="rgba(160,130,255,0.3)" stroke-width="1.5" class="ring1"/>
-    <circle cx="120" cy="100" r="48" fill="rgba(100,70,200,0.25)" stroke="rgba(160,130,255,0.5)" stroke-width="1"/>
-    <!-- Hand fingers -->
-    <rect x="109" y="68" width="9" height="28" rx="4.5" fill="rgba(255,220,180,0.95)"/>
-    <rect x="120" y="72" width="9" height="25" rx="4.5" fill="rgba(255,220,180,0.95)"/>
-    <rect x="98" y="72" width="9" height="25" rx="4.5" fill="rgba(255,220,180,0.95)"/>
-    <rect x="87" y="78" width="8" height="20" rx="4" fill="rgba(255,220,180,0.95)"/>
-    <rect x="87" y="96" width="44" height="22" rx="8" fill="rgba(255,220,180,0.95)"/>
-    <!-- Annotation line -->
-    <path d="M109 96 Q118 78 130 90 Q140 102 125 110" fill="none" stroke="rgba(255,80,80,0.9)" stroke-width="2.5" stroke-linecap="round" class="draw-path"/>
-    <circle cx="109" cy="96" r="4" fill="rgba(255,80,80,0.9)"/>
+  <!-- Outer pulse ring -->
+  <circle cx="120" cy="100" r="58" fill="none" stroke="rgba(160,130,255,0.35)" stroke-width="1.5">
+    <animate attributeName="r" values="55;63;55" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Inner ring -->
+  <circle cx="120" cy="100" r="46" fill="rgba(100,70,200,0.22)" stroke="rgba(160,130,255,0.5)" stroke-width="1"/>
+
+  <!-- Floating hand group -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0; 0,-7; 0,0" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1"/>
+    <!-- Fingers -->
+    <rect x="109" y="68" width="9" height="28" rx="4.5" fill="#ffdcb4"/>
+    <rect x="120" y="72" width="9" height="25" rx="4.5" fill="#ffdcb4"/>
+    <rect x="98" y="72" width="9" height="25" rx="4.5" fill="#ffdcb4"/>
+    <rect x="87" y="78" width="8" height="20" rx="4" fill="#ffdcb4"/>
+    <!-- Thumb -->
+    <rect x="130" y="82" width="8" height="18" rx="4" fill="#ffdcb4" transform="rotate(20,134,91)"/>
+    <!-- Palm -->
+    <rect x="87" y="94" width="46" height="24" rx="8" fill="#ffdcb4"/>
+    <!-- Annotation dot -->
+    <circle cx="109" cy="68" r="4" fill="rgba(255,80,80,0.9)">
+      <animate attributeName="r" values="3;5;3" dur="1.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.5;1" dur="1.4s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Annotation path drawn with SMIL -->
+    <path d="M109 68 Q120 50 135 62 Q148 74 132 84" fill="none" stroke="rgba(255,80,80,0.85)" stroke-width="2.5" stroke-linecap="round"
+      stroke-dasharray="120" stroke-dashoffset="120">
+      <animate attributeName="stroke-dashoffset" values="120;0;120" dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1"/>
+    </path>
   </g>
 
-  <!-- Title text -->
-  <text x="210" y="85" font-family="system-ui, sans-serif" font-size="28" font-weight="600" fill="white" class="title">Presentation Dynamics</text>
-  <text x="210" y="118" font-family="system-ui, sans-serif" font-size="22" font-weight="400" fill="rgba(200,185,255,0.9)" class="sub">through Gesture Control</text>
-  <text x="212" y="148" font-family="system-ui, sans-serif" font-size="13" fill="rgba(180,165,255,0.65)" class="sub">Control slides hands-free · Computer Vision · AI-Powered</text>
+  <!-- Project title -->
+  <text x="210" y="78" font-family="system-ui,sans-serif" font-size="26" font-weight="700" fill="white" opacity="0">
+    Presentation Dynamics
+    <animate attributeName="opacity" values="0;1" dur="0.8s" begin="0.1s" fill="freeze"/>
+  </text>
+  <text x="210" y="110" font-family="system-ui,sans-serif" font-size="20" font-weight="400" fill="rgba(200,185,255,0.88)" opacity="0">
+    through Gesture Control
+    <animate attributeName="opacity" values="0;1" dur="0.8s" begin="0.4s" fill="freeze"/>
+  </text>
+  <text x="212" y="138" font-family="system-ui,sans-serif" font-size="12" fill="rgba(180,165,255,0.6)" opacity="0">
+    Control slides hands-free  ·  Computer Vision  ·  AI-Powered
+    <animate attributeName="opacity" values="0;1" dur="0.8s" begin="0.7s" fill="freeze"/>
+  </text>
 
-  <!-- Badges row -->
-  <rect x="210" y="163" width="64" height="20" rx="10" fill="rgba(99,70,255,0.3)" stroke="rgba(130,100,255,0.5)" stroke-width="1"/>
-  <text x="242" y="177" font-family="system-ui,sans-serif" font-size="10" fill="#c4b5fd" text-anchor="middle">Python</text>
+  <!-- Tech pill badges -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.6s" begin="0.9s" fill="freeze"/>
+    <rect x="210" y="152" width="62" height="20" rx="10" fill="rgba(99,70,255,0.32)" stroke="rgba(130,100,255,0.55)" stroke-width="1"/>
+    <text x="241" y="166" font-family="system-ui,sans-serif" font-size="10" fill="#c4b5fd" text-anchor="middle">Python</text>
 
-  <rect x="282" y="163" width="64" height="20" rx="10" fill="rgba(20,160,100,0.25)" stroke="rgba(20,200,120,0.4)" stroke-width="1"/>
-  <text x="314" y="177" font-family="system-ui,sans-serif" font-size="10" fill="#6ee7b7" text-anchor="middle">OpenCV</text>
+    <rect x="280" y="152" width="64" height="20" rx="10" fill="rgba(20,160,100,0.25)" stroke="rgba(20,200,120,0.45)" stroke-width="1"/>
+    <text x="312" y="166" font-family="system-ui,sans-serif" font-size="10" fill="#6ee7b7" text-anchor="middle">OpenCV</text>
 
-  <rect x="354" y="163" width="68" height="20" rx="10" fill="rgba(30,120,220,0.25)" stroke="rgba(60,150,255,0.4)" stroke-width="1"/>
-  <text x="388" y="177" font-family="system-ui,sans-serif" font-size="10" fill="#93c5fd" text-anchor="middle">MediaPipe</text>
+    <rect x="352" y="152" width="74" height="20" rx="10" fill="rgba(30,120,220,0.25)" stroke="rgba(60,150,255,0.45)" stroke-width="1"/>
+    <text x="389" y="166" font-family="system-ui,sans-serif" font-size="10" fill="#93c5fd" text-anchor="middle">MediaPipe</text>
 
-  <rect x="430" y="163" width="64" height="20" rx="10" fill="rgba(220,80,80,0.2)" stroke="rgba(255,100,100,0.4)" stroke-width="1"/>
-  <text x="462" y="177" font-family="system-ui,sans-serif" font-size="10" fill="#fca5a5" text-anchor="middle">CVZone</text>
+    <rect x="434" y="152" width="64" height="20" rx="10" fill="rgba(220,80,80,0.22)" stroke="rgba(255,100,100,0.45)" stroke-width="1"/>
+    <text x="466" y="166" font-family="system-ui,sans-serif" font-size="10" fill="#fca5a5" text-anchor="middle">CVZone</text>
 
-  <rect x="502" y="163" width="72" height="20" rx="10" fill="rgba(34,197,94,0.2)" stroke="rgba(34,197,94,0.4)" stroke-width="1"/>
-  <text x="538" y="177" font-family="system-ui,sans-serif" font-size="10" fill="#86efac" text-anchor="middle">Real-time</text>
+    <rect x="506" y="152" width="70" height="20" rx="10" fill="rgba(34,197,94,0.2)" stroke="rgba(34,197,94,0.45)" stroke-width="1"/>
+    <text x="541" y="166" font-family="system-ui,sans-serif" font-size="10" fill="#86efac" text-anchor="middle">Real-time</text>
+  </g>
 </svg>
 
 # Gesture-Controlled Presentation
