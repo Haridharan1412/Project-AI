@@ -87,40 +87,8 @@ CVZone         # High-level hand tracking
 NumPy          # Array & coordinate math
 SpeechRecognition  # Voice commands (test.py)
 A working webcam   # Required hardware
+
 ```
-
----
-
-## 🚀 Getting Started
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/your-username/gesture-presentation.git
-cd gesture-presentation
-```
-
-### 2. Install dependencies
-
-```bash
-pip install opencv-python cvzone mediapipe numpy SpeechRecognition
-```
-
-### 3. Add your presentation slides
-
-Place your slide images (e.g., `slide1.jpg`, `slide2.jpg`, ...) inside the `Presentation/` folder.
-
-### 4. Run the application
-
-```bash
-# Standard gesture control
-python main.py
-
-# Extended mode (pen indicator, slider, voice commands)
-python test.py
-```
-
----
 
 ## 🛠️ Tech Stack
 
@@ -184,11 +152,7 @@ python test.py
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer&animation=twinkling" width="100%"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=14&pause=1500&color=6E40C9&center=true&vCenter=true&width=440&lines=Built+with+❤️+by+Haridharan+K.S;Star+⭐+the+repo+if+you+found+it+useful!" alt="Footer Typing"/>
-
 <br/>
-
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/your-username)
 
 <sub>© 2024 Haridharan K.S — Gesture-Controlled Presentation</sub>
 
